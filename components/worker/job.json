@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_worker_jobs",
+  "info": {
+    "name": "job",
+    "icon": "clipboard-list"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

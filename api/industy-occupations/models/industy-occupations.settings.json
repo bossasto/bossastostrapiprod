@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industy_occupations",
+  "info": {
+    "name": "industyOccupations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "status": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "industry": {
+      "via": "industy_occupations",
+      "model": "industries"
+    },
+    "jobs": {
+      "via": "industy_occupation",
+      "collection": "job"
+    }
+  }
+}

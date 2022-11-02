@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Amount": {
+      "type": "decimal"
+    },
+    "DateCreated": {
+      "type": "string"
+    },
+    "DateCreatedPlusThirty": {
+      "type": "string"
+    },
+    "PaymentMethod": {
+      "type": "string"
+    },
+    "PaymentPlan": {
+      "type": "string"
+    },
+    "RecurringPayment": {
+      "type": "boolean"
+    },
+    "Cancel": {
+      "type": "boolean"
+    },
+    "UserId": {
+      "type": "integer"
+    },
+    "HasPaid": {
+      "type": "boolean"
+    },
+    "DateCancelled": {
+      "type": "string"
+    }
+  }
+}

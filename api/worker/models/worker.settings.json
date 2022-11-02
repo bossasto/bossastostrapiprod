@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workers",
+  "info": {
+    "name": "worker",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "mobilePhone": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "jobDescription": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "workExperience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "worker.work-experience"
+    },
+    "education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "worker.education"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "desiredJobs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "worker.job"
+    },
+    "undesiredJobs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "worker.job"
+    },
+    "languages": {
+      "collection": "language"
+    },
+    "user": {
+      "via": "worker",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "applications": {
+      "via": "worker",
+      "collection": "application"
+    },
+    "favorites": {
+      "collection": "company",
+      "populate": true
+    },
+    "driverLicences": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "citizenship": {
+      "type": "string"
+    },
+    "industries": {
+      "collection": "industries"
+    },
+    "industy_occupations": {
+      "collection": "industy-occupations"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

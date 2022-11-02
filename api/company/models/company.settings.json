@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "mobilePhone": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "companyName"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "users": {
+      "via": "company",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "companyCategory": {
+      "via": "companies",
+      "model": "company-category"
+    },
+    "favorites": {
+      "collection": "worker"
+    },
+    "applications": {
+      "via": "company",
+      "collection": "application"
+    },
+    "jobs": {
+      "via": "company",
+      "collection": "job"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "industries": {
+      "collection": "industries"
+    },
+    "industy_occupations": {
+      "collection": "industy-occupations"
+    },
+    "isEmailSubscription": {
+      "type": "boolean",
+      "default": false
+    },
+    "emailSubFor": {
+      "collection": "industries"
+    }
+  }
+}

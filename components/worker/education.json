@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_worker_educations",
+  "info": {
+    "name": "education",
+    "icon": "book-reader",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "SCHOOL",
+        "SEMINAR",
+        "COURSE",
+        "FACULTY",
+        "TRAINING"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

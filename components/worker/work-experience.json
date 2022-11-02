@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_worker_work_experiences",
+  "info": {
+    "name": "workExperience",
+    "icon": "list-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

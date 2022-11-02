@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "job",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "jobTypes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "worker.job"
+    },
+    "applications": {
+      "via": "job",
+      "collection": "application"
+    },
+    "company": {
+      "via": "jobs",
+      "model": "company"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "monthlyPayroll": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "ongoing",
+        "canceled",
+        "finished"
+      ],
+      "default": "open",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "industry": {
+      "model": "industries",
+      "via": "jobs"
+    },
+    "industy_occupation": {
+      "via": "jobs",
+      "model": "industy-occupations"
+    }
+  }
+}

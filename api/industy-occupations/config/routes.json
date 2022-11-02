@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/industy-occupations",
+      "handler": "industy-occupations.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/industy-occupations/count",
+      "handler": "industy-occupations.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/industy-occupations/:id",
+      "handler": "industy-occupations.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/industy-occupations",
+      "handler": "industy-occupations.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/industy-occupations/:id",
+      "handler": "industy-occupations.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/industy-occupations/:id",
+      "handler": "industy-occupations.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

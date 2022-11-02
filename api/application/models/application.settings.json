@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "name": "application",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "worker": {
+      "via": "applications",
+      "model": "worker"
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ]
+    },
+    "job": {
+      "via": "applications",
+      "model": "job"
+    },
+    "company": {
+      "via": "applications",
+      "model": "company"
+    }
+  }
+}
